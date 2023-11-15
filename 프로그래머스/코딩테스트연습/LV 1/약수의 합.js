@@ -1,15 +1,25 @@
+// function solution(n) {
+
+//   let arr =[];
+//   //2로 나누어서 나머지가 0이라면 짝수
+//   for(i =1 ;i<=n;i++){
+//       if(i % 2 === 0){ arr.push(i)}
+//   }
+
+//   return arr.reduce((a,b)=>(a+b),0)
+//   //나눈걸 배열안에 모두 집어널고 다 더한다
+
+// }
+
 function solution(n) {
-  //약수를 구하는 방법...자기 자신을 나눴을때 값이 1과 자기자신   나머지가0이되어야함
-  let i = 1;
-  let arr = [];
-  while (i <= n) {
-    if (n % i === 0) {
-      arr.push(i);
+  let arr = 0;
+  //2로 나누어서 나머지가 0이라면 짝수
+  for (i = 1; i <= n; i++) {
+    if (i % 2 === 0) {
+      arr = arr + i;
     }
-    i++;
   }
 
-  return arr.reduce((a, b) => {
-    return a + b;
-  }, 0);
+  return arr;
+  //나눈걸 배열안에 모두 집어널고 다 더한다
 }
